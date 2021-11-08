@@ -10,9 +10,12 @@ spring:
 
 
 management:
-  endpoint:
-    gateway:
-      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+
+
 # http://localhost:8765/service-another-micro-dude/service1/feign-bla
 # http://localhost:8765/service-micro-dude-kman/consume-me
 # http://localhost:8765/get
